@@ -1,0 +1,312 @@
+<template>
+  <div class="full-block">
+    <ECharts :options="options" auto-resize></ECharts>
+  </div>
+</template>
+
+<script>
+import chartColors from 'constants/chartColors'
+import { tooltipOpt, legendOpt } from 'constants/chartConfig'
+import ECharts from 'vue-echarts/components/ECharts'
+import 'echarts/lib/chart/radar'
+import globalChartMixin from 'mixins/globalChartMixin'
+import gridChartMixin from 'mixins/gridChartMixin'
+import axisChartMixin from 'mixins/axisChartMixin'
+
+export default {
+  name: 'RadarChart',
+  components: {
+    ECharts
+  },
+  mixins: [ globalChartMixin, axisChartMixin, gridChartMixin ],
+  props: {
+    chartData: {
+      type: Object,
+      default: function() {
+        return {
+          legendData: ['北京', '上海'],
+          indicatorData: [
+            {
+              name: '移动恶意程序事件',
+              max: 1500
+            },
+            {
+              name: '暗链',
+              max: 1500
+            },
+            {
+              name: '漏洞',
+              max: 1500
+            },
+            {
+              name: '钓鱼',
+              max: 1500
+            },
+            {
+              name: '篡改',
+              max: 1500
+            },
+            {
+              name: '挂马',
+              max: 1500
+            }
+          ],
+          seriesArrayData: [
+            {
+              seriesData: [
+                [1036, 1458, 1290, 998, 1048, 1398],
+                [236, 558, 490, 398, 148, 298]
+              ]
+            },
+            {
+              seriesData: [
+                [566, 958, 290, 598, 848, 698],
+                [1236, 1158, 1090, 1298, 1088, 1458]
+              ]
+            }
+          ]
+        }
+      }
+    },
+    colors: {
+      type: Array,
+      default: () => chartColors.colors
+    },
+    shape: {
+      type: String,
+      default: 'polygon'
+    },
+    radius: {
+      type: Number,
+      default: 120
+    },
+    splitNumber: {
+      type: Number,
+      default: 6
+    },
+    startAngle: {
+      type: Number,
+      default: 90
+    },
+    center: {
+      type: Array,
+      default: () => ['50%', '50%']
+    },
+    type: {
+      type: String,
+      default: () => 'solid'
+    },
+    shadowBlur: {
+      type: Number,
+      default: 10
+    },
+    symbol: {
+      type: String,
+      default: () => 'circle'
+    },
+    width: {
+      type: Number,
+      default: 1
+    },
+    opacity: {
+      type: Number,
+      default: 1
+    },
+    radarAreaStyleNormal: {
+      type: String,
+      default: chartColors.radar.areaNormal
+    },
+    radarAreaStyleEmphasis: {
+      type: String,
+      default: chartColors.radar.areaEmphasis
+    },
+    radarNameColor: {
+      type: String,
+      default: chartColors.radar.name
+    },
+    radarSplitLine: {
+      type: String,
+      default: chartColors.radar.splitLine
+    },
+    radarsplitAreaColor: {
+      type: String,
+      default: chartColors.radar.splitArea
+    },
+    radarAxisLine: {
+      type: String,
+      default: chartColors.radar.axisLine
+    }
+  },
+  data() {
+    return {
+      // radarOption: {},
+      chartName: '[雷达图模板]'
+    }
+  },
+  watch: {
+    chartData(newVal, oldVal) {
+      // console.log(`${this.chartName}chartData[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    colors(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    shape(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    radius(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    splitNumber(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    startAngle(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    center(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    type(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    shadowBlur(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    symbol(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    width(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    opacity(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    radarAreaStyleNormal(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    radarAreaStyleEmphasis(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    radarNameColor(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    radarSplitLine(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    radarsplitAreaColor(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    },
+    radarAxisLine(newVal, oldVal) {
+      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
+      this.refresh()
+    }
+  },
+  mounted() {
+    this.createTplCode('RadarChart')
+  },
+  methods: {
+    setOptions() {
+      let [ legendData, indicatorData, seriesArrayData ] = [ this.chartData.legendData, this.chartData.indicatorData, this.chartData.seriesArrayData ]
+      const series = []
+      if (legendData && legendData.length !== 0) {
+        legendData.forEach((item, index) => {
+          series.push({
+            name: item,
+            type: 'radar',
+            lineStyle: {
+              normal: {
+                width: this.width, //线条的粗细
+                opacity: this.opacity, //线条的透明度
+                type: this.type
+              }
+            },
+            symbol: this.symbol,
+            color: this.colors,
+            areaStyle: {
+              normal: {
+                color: this.radarAreaStyleNormal
+              },
+              emphasis: {
+                color: this.radarAreaStyleEmphasis
+              }
+            },
+            data: seriesArrayData[index].seriesData
+          })
+        })
+      }
+      var radarOption = {
+        color: this.colors,
+        tooltip: {
+          ...tooltipOpt('item')
+        },
+        // radius: this.radius, //定义未起作用
+        backgroundColor: 'transparent',
+        legend: {
+          data: legendData,
+          selectedMode: 'single',
+          ...legendOpt(
+            this.legendLeft,
+            this.legendTop,
+            this.legendRight,
+            this.legendBottom,
+            this.legendType,
+            this.legendOrient
+          ),
+          show: this.legendShow,
+          textStyle: {
+            color: this.colors //文字选中时的颜色
+          }
+        },
+        radar: {
+          center: this.center,
+          radius: this.radius, 
+          startAngle: this.startAngle,
+          shape: this.shape,
+          splitNumber: this.splitNumber,
+          name: {
+            textStyle: {
+              color: this.radarNameColor
+            }
+          },
+          splitLine: {
+            lineStyle: {
+              color: this.radarSplitLine
+            }
+          },
+          splitArea: {
+            show: true,
+            areaStyle: {
+              color: this.radarsplitAreaColor,
+              shadowBlur: this.shadowBlur
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              color: this.radarAxisLine
+            }
+          },
+          indicator: indicatorData
+        },
+        series: series
+      }
+      return radarOption
+    }
+  }
+}
+</script>

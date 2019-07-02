@@ -1,0 +1,47 @@
+.chartBox() {
+  .chart-box {
+    box-shadow: inset 0 0 15px 0 @boxShadowColor;
+    height: 100%;
+    width: 100%;
+    .chart-title {
+      padding: 0px 15px;
+      height: 4vh;
+      .header-title{
+        height: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid @borderColor;
+        text-align: left;
+        position: relative;
+        &::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 40px;
+          bottom: -2px;
+          left: 0;
+          border-top: 3px solid @activeColor;
+        }
+        .title {
+          line-height: 4vh;
+          font-size: 1.1vmax;
+          display: inline-block;
+          box-sizing: border-box;
+          color: @grey10;
+          padding: 0 5px;
+        }
+      }
+    }
+    .chart-wrapper {
+      height: calc(~'100% - 4vh');
+      padding: 10px 15px;
+      box-sizing: border-box;
+      >div {
+        height: 100%;
+        width: 100%;
+      }
+      &.full-h{
+        height: 100%;
+      }
+    }
+  }
+}

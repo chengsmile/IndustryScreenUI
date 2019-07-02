@@ -1,0 +1,101 @@
+.mainHeight() {
+  .main-height {
+    &.el-row {
+      height: 100%;
+      .el-col{
+        height: 100%;
+        >div {
+          height: 100%;
+          .row-h {
+            .wrapper {
+              height: calc(~'100% - 10px');
+              margin-bottom: 10px;
+              >.chart-explain {
+                font-size: 0.9vmax;
+                // margin-bottom: 10px;
+              }
+              .chart-div {
+                height: calc(~'100% - 0.9vmax');
+              }
+            }
+          }
+        }
+        .ratio11 {
+          @height: calc(~'(100% / 2)');
+          .h-1{
+            height: @height;
+          }
+        }
+        .ratio12 {
+          @height: calc(~'(100% / 3)');
+          .h-1{
+            height: @height;
+          }
+          .h-2{
+            height: calc(~'@{height} * 2');
+          }
+        }
+        .ratio13 {
+          @height: calc(~'(100% / 4)');
+          .h-1{
+            height: @height;
+          }
+          .h-3 {
+            height: calc(~'@{height} * 3');
+          }
+        }
+        .ratio21 {
+          @height: calc(~'(100% / 3)');
+          .h-1{
+            height: @height;
+          }
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+        .ratio31 {
+          @height: calc(~'(100% / 4)');
+          .h-1{
+            height: @height;
+          }
+          .h-3{
+            height: calc(~'@{height} * 3');
+          }
+        }
+        .ratio111 {
+          @height: calc(~'(100% / 3)');
+          .h-1{
+            height: @height;
+          }
+        }
+        .ratio121 {
+          @height: calc(~'(100% / 4)');
+          .h-1{
+            height: @height;
+          }
+          .h-2{
+            height: calc(~'@{height} * 2');
+          }
+        }
+        .ratio122 {
+          @height: calc(~'(100% / 5)');
+          .h-1{
+            height: @height;
+          }
+          .h-2{
+            height: calc(~'@{height} * 2');
+          }
+        }
+        .ratio112 {
+          @height: calc(~'(100% / 4)');
+          .h-1{
+            height: @height;
+          }
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
+      }
+    }
+  }
+}

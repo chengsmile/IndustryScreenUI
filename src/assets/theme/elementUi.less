@@ -1,0 +1,39 @@
+.elementUi() {
+  #app {
+    .el-table th {
+      background-color: @tableThBg;
+      >.cell {
+        color: @grey10;
+      }
+    }
+    .el-table tr{
+      background-color: @tableTdBg;
+      .cell {
+        color: @grey7;
+      }
+    }
+    .el-table--striped .el-table__body tr.el-table__row--striped td{
+      background: @tableStriped;
+    }
+    .el-table--enable-row-hover .el-table__body tr:hover>td{
+       background-color: @tableStriped;
+    }
+    .el-table td,
+    .el-table th.is-leaf{
+      border-bottom: 1px solid @borderColor;
+    }
+    .el-table--border::after,
+    .el-table--group::after,
+    .el-table::before{
+      background-color: @borderColor;
+    }
+    .el-table--fit {
+      border: 1px solid @borderColor;
+      border-bottom: none;
+    }
+    .el-table,
+    .el-table__expanded-cell{
+      background-color: transparent;
+    }
+  }
+}

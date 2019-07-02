@@ -1,0 +1,58 @@
+.cornerBg() {
+  .corner-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    background: @tableTdBg;
+    border: 1px solid @borderColor;
+    z-index: -1;
+  
+    span {
+      position: absolute;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-color: @cornerBorder;
+      border-style: solid;
+      border-width: 0;
+  
+      @borderRadius: 0px;
+      @borderWidth: 2px;
+  
+      &.top-left {
+        border-left-width: @borderWidth;
+        border-top-width: @borderWidth;
+        border-top-left-radius: @borderRadius;
+        left: -2px;
+        top: -2px;
+      }
+  
+      &.bottom-left {
+        border-left-width: @borderWidth;
+        border-bottom-width: @borderWidth;
+        border-bottom-left-radius: @borderRadius;
+        left: -2px;
+        bottom: -2px;
+      }
+  
+      &.top-right {
+        border-right-width: @borderWidth;
+        border-top-width: @borderWidth;
+        border-top-right-radius: @borderRadius;
+        right: -2px;
+        top: -2px;
+      }
+  
+      &.bottom-right {
+        border-right-width: @borderWidth;
+        border-bottom-width: @borderWidth;
+        border-bottom-right-radius: @borderRadius;
+        right: -2px;
+        bottom: -2px;
+      }
+    }
+  }
+}

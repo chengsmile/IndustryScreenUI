@@ -1,0 +1,49 @@
+{
+  "name": "layoutdemo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "cross-env LAYOUT=xiajun vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-mock": "vue-cli-service build --mode build-mock",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "core-js": "^2.6.5",
+    "echarts": "^4.2.1",
+    "element-ui": "^2.7.2",
+    "html2canvas": "^1.0.0-rc.1",
+    "js-md5": "^0.7.3",
+    "jspdf": "^1.5.3",
+    "mockjs": "^1.0.1-beta3",
+    "nprogress": "^0.2.0",
+    "resize-detector": "^0.2.0",
+    "vue": "^2.6.10",
+    "vue-echarts": "^4.0.2",
+    "vue-router": "^3.0.6",
+    "vue-touch-ripple": "^3.0.0",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.21",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2"
+  }
+}
