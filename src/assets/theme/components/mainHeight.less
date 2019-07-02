@@ -95,6 +95,15 @@
             height: calc(~'@{height} * 2');
           }
         }
+        .ratio212 {
+          @height: calc(~'(100% / 5)');
+          .h-1{
+            height: @height;
+          }
+          .h-2 {
+            height: calc(~'@{height} * 2');
+          }
+        }
       }
     }
   }

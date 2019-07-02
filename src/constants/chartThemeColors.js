@@ -7,9 +7,9 @@ export default {
       pageText: '#fff'
     },
     axis: {
-      label: '#fff',
-      line: '#4d5897',
-      splitLine: '#31396c'
+      label: '#c8c6ff',
+      line: '#88a1ed',
+      splitLine: '#2d70c8'
     },
     visualMap: {
       text: '#3CC7FF',
@@ -20,6 +20,10 @@ export default {
       gradualStart: ['#d85dfa', 'rgba(34,183,197,.2)', 'rgba(213,82,84,.2)', 'rgba(171,66,197,.2)'],
       gradualEnd: ['#4969f9', 'rgba(34,183,197,0)', 'rgba(213,82,84,0)', 'rgba(171,66,197,0)'],
       shadow: '#2c15b9'
+    },
+    pictorialBar: {
+      border: '#4042db',
+      bg: '#1c1a9b'
     },
     line: {
       colors: ['rgba(86,196,249,1)', 'rgba(34,45,143,1)', 'rgba(213,82,84,1)', 'rgba(171,66,197,1)'],

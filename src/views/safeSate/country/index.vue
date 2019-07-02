@@ -22,17 +22,14 @@
                   <div class="row-h h-1">
                     <div class="wrapper">
                       <el-row class="full-block" :gutter="10">
-                        <el-col :span="8" class="gauge-pie-box">
-                          <GaugePieChart :gradientStartColors="_tColors.gaugePie.colors[0]"></GaugePieChart>
-                          <h3 class="gauge-pie-name">企业</h3>
+                        <el-col :span="8">
+                          <GaugePieChart :chartData="gaugePie1" :gradientStartColors="_tColors.gaugePie.colors[0]"></GaugePieChart>
                         </el-col>
-                        <el-col :span="8" class="gauge-pie-box">
-                          <GaugePieChart :gradientStartColors="_tColors.gaugePie.colors[1]"></GaugePieChart>
-                          <h3 class="gauge-pie-name">设备</h3>
+                        <el-col :span="8">
+                          <GaugePieChart :chartData="gaugePie2" :gradientStartColors="_tColors.gaugePie.colors[1]"></GaugePieChart>
                         </el-col>
-                        <el-col :span="8" class="gauge-pie-box">
-                          <GaugePieChart :gradientStartColors="_tColors.gaugePie.colors[2]"></GaugePieChart>
-                          <h3 class="gauge-pie-name">平台</h3>
+                        <el-col :span="8">
+                          <GaugePieChart :chartData="gaugePie3" :gradientStartColors="_tColors.gaugePie.colors[2]"></GaugePieChart>
                         </el-col>
                       </el-row>
                     </div>
@@ -62,7 +59,9 @@
       <el-col :span="12">
         <div class="ratio21">
           <div class="row-h h-2">
-            <div class="wrapper"></div>
+            <div class="wrapper">
+              
+            </div>
           </div>
           <div class="row-h h-1">
             <div class="wrapper" ref="tableBox">
@@ -87,25 +86,28 @@
             <div class="wrapper pr">
               <CornerBg></CornerBg>
               <ChartBox title="漏洞分析">
-                <div slot="chart" class="ratio112">
-                  <div class="row-h h-1">
+                <div slot="chart" class="ratio212">
+                  <div class="row-h h-2">
                     <div class="wrapper">
                       <el-row class="full-block" :gutter="10">
-                        <el-col :span="8" class="full-h">
-                          <PieChart></PieChart>
+                        <el-col :span="8">
+                          <GaugePieChart :chartData="gaugePie4" :gradientStartColors="_tColors.gaugePie.colors[0]"></GaugePieChart>
                         </el-col>
-                        <el-col :span="8" class="full-h">
-                          <PieChart></PieChart>
+                        <el-col :span="8">
+                          <GaugePieChart :chartData="gaugePie5" :gradientStartColors="_tColors.gaugePie.colors[1]"></GaugePieChart>
                         </el-col>
-                        <el-col :span="8" class="full-h">
-                          <PieChart></PieChart>
+                        <el-col :span="8">
+                          <GaugePieChart :chartData="gaugePie6" :gradientStartColors="_tColors.gaugePie.colors[2]"></GaugePieChart>
                         </el-col>
                       </el-row>
                     </div>
                   </div>
                   <div class="row-h h-1">
                     <div class="wrapper">
-                      
+                      <h3 class="chart-explain">风险指数</h3>
+                      <div class="chart-div">
+                        <PictorialBarChart></PictorialBarChart>
+                      </div>
                     </div>
                   </div>
                   <div class="row-h h-2">
@@ -144,11 +146,12 @@ import PieChart from 'components/echarts/pie/pieChart'
 import GaugePieChart from 'components/echarts/pie/gaugePieChart'
 import LineChart from 'components/echarts/line/lineChart'
 import BarChart from 'components/echarts/bar/barChart'
+import PictorialBarChart from 'components/echarts/pictorialBar/pictorialBarChart'
 import { on, off } from 'utils/dom'
 export default {
   name: 'SafeSate-Country',
   props: {},
-  components: { ChartBox, CornerBg, HeadBox, PieChart, LineChart, BarChart, TotalList, GaugePieChart },
+  components: { ChartBox, CornerBg, HeadBox, PieChart, LineChart, BarChart, TotalList, GaugePieChart, PictorialBarChart },
   data () {
     return {
       tabBtnActive: 0,
@@ -188,7 +191,13 @@ export default {
         legendData: ['漏洞'],
         seriesData: [[672, 545, 876, 998, 768]],
         categoryData: ['1', '2', '3', '4', '5']
-      }
+      },
+      gaugePie1: { value: 65, name: '企业'},
+      gaugePie2: { value: 50, name: '设备'},
+      gaugePie3: { value: 42, name: '平台'},
+      gaugePie4: { value: 75, name: '高危'},
+      gaugePie5: { value: 89, name: '中危'},
+      gaugePie6: { value: 60, name: '低危'}
     }
   },
   computed: {},

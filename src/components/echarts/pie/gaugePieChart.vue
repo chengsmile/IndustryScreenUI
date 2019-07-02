@@ -56,6 +56,10 @@
       bgBorderColor: {
         type: String,
         default: chartColors.gaugePie.bgBorder
+      },
+      subTextHeight: {
+        type: Number,
+        default: 30
       }
     },
     data() {
@@ -100,15 +104,19 @@
       bgBorderColor(newVal, oldVal) {
         // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
-      }
+      },
+      subTextHeight(newVal, oldVal) {
+        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
+        this.refresh()
+      },
     },
     methods: {
       setOptions() {
         var pieOpts = {
           title: {
-            text: this.chartData.value + '%',
             x: '48%',
             y: '42%',
+            text: this.chartData.value + '%',
             textAlign: 'center',
             textStyle: {
               fontWeight: 'bold',
@@ -116,7 +124,43 @@
               color: this.titleColor
             }
           },
-          series: [{ // 主圆环
+          series: [
+            {
+              name: '',
+              type: 'pie',
+              radius: ['40%', '60%'],
+              hoverAnimation: false,
+              silent: true,
+              startAngle: 225,
+              labelLine: {
+                normal: {
+                  show: false
+                }
+              },
+              z: 15,
+              data: [{
+                value: 75,
+                itemStyle: {
+                  color: 'transparent'
+                }
+              }, {
+                value: 25,
+                itemStyle: {
+                  color: 'transparent'
+                },
+                label: {
+                  normal: {
+                    show: true,
+                    formatter: this.chartData.name,
+                    position: 'inner',
+                    textStyle: {
+                      color: this.gradientStartColors,
+                      fontSize: 16
+                    }
+                  }
+                }
+              }]
+            }, { // 主圆环
                 name: this.chartData.name,
                 type: 'pie',
                 radius: ['50%', '80%'],
