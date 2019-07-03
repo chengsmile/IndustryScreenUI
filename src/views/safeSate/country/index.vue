@@ -60,7 +60,7 @@
         <div class="ratio21">
           <div class="row-h h-2">
             <div class="wrapper">
-              
+              <ScatterBarChart gridLeft="10%" gridRight="10%"></ScatterBarChart>
             </div>
           </div>
           <div class="row-h h-1">
@@ -126,7 +126,37 @@
             <div class="wrapper pr">
               <CornerBg></CornerBg>
               <ChartBox title="受害工业企业TOP10">
-                <div slot="chart">
+                <div slot="chart" class="ratio11">
+                  <div class="row-h h-1">
+                    <div class="wrapper">
+                      <el-row class="full-block" :gutter="10">
+                        <el-col :span="8">
+                          <LiquidFillChart :chartData="liquidFillData1"></LiquidFillChart>
+                        </el-col>
+                        <el-col :span="8">
+                          <LiquidFillChart :chartData="liquidFillData2"></LiquidFillChart>
+                        </el-col>
+                        <el-col :span="8">
+                          <LiquidFillChart :chartData="liquidFillData3"></LiquidFillChart>
+                        </el-col>
+                      </el-row>
+                    </div>
+                  </div>
+                  <div class="row-h h-1">
+                    <div class="wrapper">
+                      <el-row class="full-block" :gutter="10">
+                        <el-col :span="8">
+                          <LiquidFillChart :chartData="liquidFillData1"></LiquidFillChart>
+                        </el-col>
+                        <el-col :span="8">
+                          <LiquidFillChart :chartData="liquidFillData2"></LiquidFillChart>
+                        </el-col>
+                        <el-col :span="8">
+                          <LiquidFillChart :chartData="liquidFillData3"></LiquidFillChart>
+                        </el-col>
+                      </el-row>
+                    </div>
+                  </div>
                 </div>
               </ChartBox>
             </div>
@@ -142,16 +172,18 @@ import ChartBox from 'components/chartBox'
 import TotalList from 'components/totalList'
 import CornerBg from 'components/cornerBg'
 import HeadBox from 'components/headBox'
-import PieChart from 'components/echarts/pie/pieChart'
+// import PieChart from 'components/echarts/pie/pieChart'
 import GaugePieChart from 'components/echarts/pie/gaugePieChart'
 import LineChart from 'components/echarts/line/lineChart'
 import BarChart from 'components/echarts/bar/barChart'
+import ScatterBarChart from 'components/echarts/bar/scatterBarChart'
 import PictorialBarChart from 'components/echarts/pictorialBar/pictorialBarChart'
+import LiquidFillChart from 'components/echarts/liquidFill/liquidFillChart'
 import { on, off } from 'utils/dom'
 export default {
   name: 'SafeSate-Country',
   props: {},
-  components: { ChartBox, CornerBg, HeadBox, PieChart, LineChart, BarChart, TotalList, GaugePieChart, PictorialBarChart },
+  components: { ChartBox, CornerBg, HeadBox, LineChart, BarChart, TotalList, GaugePieChart, PictorialBarChart, LiquidFillChart, ScatterBarChart },
   data () {
     return {
       tabBtnActive: 0,
@@ -192,12 +224,15 @@ export default {
         seriesData: [[672, 545, 876, 998, 768]],
         categoryData: ['1', '2', '3', '4', '5']
       },
-      gaugePie1: { value: 65, name: '企业'},
-      gaugePie2: { value: 50, name: '设备'},
-      gaugePie3: { value: 42, name: '平台'},
-      gaugePie4: { value: 75, name: '高危'},
-      gaugePie5: { value: 89, name: '中危'},
-      gaugePie6: { value: 60, name: '低危'}
+      gaugePie1: {value: 65, name: '企业'},
+      gaugePie2: {value: 50, name: '设备'},
+      gaugePie3: {value: 42, name: '平台'},
+      gaugePie4: {value: 75, name: '高危'},
+      gaugePie5: {value: 89, name: '中危'},
+      gaugePie6: {value: 60, name: '低危'},
+      liquidFillData1: { name: '供水', value: 0.1 },
+      liquidFillData2: { name: '供电', value: 0.3 },
+      liquidFillData3: { name: '天然气', value: 0.6 }
     }
   },
   computed: {},

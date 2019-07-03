@@ -57,10 +57,6 @@
       bgBorderColor: {
         type: String,
         default: chartColors.gaugePie.bgBorder
-      },
-      subTextHeight: {
-        type: Number,
-        default: 30
       }
     },
     data() {
@@ -105,11 +101,7 @@
       bgBorderColor(newVal, oldVal) {
         // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
-      },
-      subTextHeight(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
-        this.refresh()
-      },
+      }
     },
     methods: {
       setOptions() {

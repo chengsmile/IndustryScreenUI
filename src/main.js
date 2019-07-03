@@ -13,7 +13,7 @@ import * as menuToRouter from 'utils/menuToRouter'
 import * as utils from 'utils/util'
 import NProgress from 'nprogress' // Progress 进度条
 import 'nprogress/nprogress.css' // Progress 进度条 样式
-
+import chartThemeColors from 'constants/chartThemeColors'
 import globalMixin from 'mixins/globalMixin'
 import plugins from 'utils/plugins'
 /**
@@ -81,6 +81,7 @@ new Vue({
         this.$store.commit('SET_TITLE', res[index].menuName)
         this.$store.commit('SET_MENUS', routes[index].children)
         this.$store.commit('SET_MENUS', routes[index].children)
+        this.$store.commit('SET_THEME_COLORS', chartThemeColors['skin-wathet'])
       } else {
         alert('菜单初始化错误！！！！')
       }

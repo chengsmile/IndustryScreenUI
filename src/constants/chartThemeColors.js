@@ -11,10 +11,6 @@ export default {
       line: '#88a1ed',
       splitLine: '#2d70c8'
     },
-    visualMap: {
-      text: '#3CC7FF',
-      range: ['#F8E71C', '#D0021B']
-    },
     bar: {
       colors: ['#DD6B66', '#759AA0', '#E69D87', '#8DC1A9', '#EA7E53', '#EEDD78'],
       gradualStart: ['#d85dfa', 'rgba(34,183,197,.2)', 'rgba(213,82,84,.2)', 'rgba(171,66,197,.2)'],
@@ -23,7 +19,13 @@ export default {
     },
     pictorialBar: {
       border: '#4042db',
-      bg: '#1c1a9b'
+      bg: '#1c1a9b',
+      bgImg: 'pictorial/bg.png',
+      fillImg: 'pictorial/active.png'
+    },
+    scatterBar: {
+      colors: ['#eb2100', '#eb3600', '#d0570e', '#d0a00e', '#34da62', '#00e9db', '#00c0e9', '#0096f3', '#33CCFF', '#33FFCC'],
+      label: '#fff'
     },
     line: {
       colors: ['rgba(86,196,249,1)', 'rgba(34,45,143,1)', 'rgba(213,82,84,1)', 'rgba(171,66,197,1)'],
@@ -44,6 +46,13 @@ export default {
       bg: '#2c15b9',
       bgBorder: '#4245d4'
     },
+    liquidFill: {
+      colors: ['#37bdbe', '#3fd6d7', '#52eeef'],
+      label: '#fff',
+      title: '#fff',
+      bg: '#073479',
+      border: '#52eeef'
+    },
     map: {
       label: 'rgba(255,255,255,1)',
       border: '#4cb4ed',
@@ -60,6 +69,8 @@ export default {
       effectScatter: '#4ddffc'
     },
     visualMap: {
+      text: '#3CC7FF',
+      range: ['#F8E71C', '#D0021B'],
       label: 'rgba(255,255,255,1)',
       border: '#4cb4ed',
       area: 'rgba(0, 86, 235, 1)',
@@ -109,19 +120,21 @@ export default {
       line: '#88a1ed',
       splitLine: '#2d70c8'
     },
-    visualMap: {
-      text: '#3CC7FF',
-      range: ['#F8E71C', '#D0021B']
-    },
     bar: {
       colors: ['#DD6B66', '#759AA0', '#E69D87', '#8DC1A9', '#EA7E53', '#EEDD78'],
-      gradualStart: ['#d85dfa', 'rgba(34,183,197,.2)', 'rgba(213,82,84,.2)', 'rgba(171,66,197,.2)'],
-      gradualEnd: ['#4969f9', 'rgba(34,183,197,0)', 'rgba(213,82,84,0)', 'rgba(171,66,197,0)'],
-      shadow: '#2c15b9'
+      gradualStart: ['#29b6ff', 'rgba(34,183,197,.2)', 'rgba(213,82,84,.2)', 'rgba(171,66,197,.2)'],
+      gradualEnd: ['#2e51dd', 'rgba(34,183,197,0)', 'rgba(213,82,84,0)', 'rgba(171,66,197,0)'],
+      shadow: '#073479'
     },
     pictorialBar: {
       border: '#4042db',
-      bg: '#1c1a9b'
+      bg: '#1c1a9b',
+      bgImg: 'pictorial/bg.png',
+      fillImg: 'pictorial/active.png'
+    },
+    scatterBar: {
+      colors: ['#1ac1ea', '#27c3db', '#3bc6bf', '#55ca9e', '#6dce7f', '#7ed169', '#8cd357', '#9cd542', '#a9d731', '#b4d924'].reverse(),
+      label: '#fff'
     },
     line: {
       colors: ['rgba(86,196,249,1)', 'rgba(34,45,143,1)', 'rgba(213,82,84,1)', 'rgba(171,66,197,1)'],
@@ -142,6 +155,13 @@ export default {
       bg: '#2c15b9',
       bgBorder: '#4245d4'
     },
+    liquidFill: {
+      colors: ['#37bdbe', '#3fd6d7', '#52eeef'],
+      label: '#fff',
+      title: '#fff',
+      bg: '#073479',
+      border: '#52eeef'
+    },
     map: {
       label: 'rgba(255,255,255,1)',
       border: '#4cb4ed',
@@ -158,6 +178,8 @@ export default {
       effectScatter: '#4ddffc'
     },
     visualMap: {
+      text: '#3CC7FF',
+      range: ['#F8E71C', '#D0021B'],
       label: 'rgba(255,255,255,1)',
       border: '#4cb4ed',
       area: 'rgba(0, 86, 235, 1)',
