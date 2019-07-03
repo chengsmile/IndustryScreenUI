@@ -49,13 +49,55 @@
   @gaugePieTextColor2: #ff9e56;
   @gaugePieTextColor3: #75f5c3;
 }
+.wathet() {
+  // 黑道白颜色
+  @grey1: #000;
+  @grey2: #262626;
+  @grey3: #595959;
+  @grey4: #8c8c8c;
+  @grey5: #bfbfbf;
+  @grey6: #d9d9d9;
+  @grey7: #e8e8e8;
+  @grey8: #f5f5f5;
+  @grey9: #fafafa;
+  @grey10: #ffffff;
+  // 头部高度
+  @headerHeight: 9vh;
+  @globalBg: #07086a;
+  @activeColor: #9dffff;
+  // 左侧菜单
+  @sideNavWidth: 310px;
+  @sideNavBtnBg: rgba(45, 185, 138, 1);
+  @sideNavBg: rgba(7, 8, 82, 0.8);
+  @sideMenuBg: linear-gradient(210deg, rgba(26, 74, 182, 0.7), rgba(45, 92, 189, 0.7), rgba(11, 165, 186, 0.7), rgba(12, 123, 135, 0.7));
+  @sideMenuActiveBg: linear-gradient(210deg, rgba(26, 74, 182, 0.7), rgba(45, 92, 189, 0.7), rgba(11, 165, 186, 0.7), rgba(12, 123, 135, 0.7));
+  @sideSubMenuBg: linear-gradient(to bottom, rgba(42, 234, 255, 0.2), rgba(0, 127, 255, 0.2));
+  @sideSubMenuActiveBg: linear-gradient(to bottom, rgba(42, 234, 255, 0.8), rgba(0, 127, 255, 0.8));
+  @transition: all 0.25s ease-in;
+
+  // 定义table颜色
+  @tableThBg: #000054;
+  @tableTdBg: #01046e;
+  @tableStriped: #100c8b;
+  @borderColor: #2d48b8;
+  @cornerBorder: #4074c9;
+
+  // tab切换激活的样式 
+  @tabActiveColor: #fff952;
+  @boxShadowColor: rgba(255, 255, 255, 0.3);
+
+  // gaugePie下方文字的颜色
+  @gaugePieTextColor1: #fc6160;
+  @gaugePieTextColor2: #ff9e56;
+  @gaugePieTextColor3: #75f5c3;
+}
 
 .skin-blue {
   .blue();
   .style-mixins();
 }
-.skin-black {
-  .blue();
+.skin-wathet {
+  .wathet();
   .style-mixins();
 }
 

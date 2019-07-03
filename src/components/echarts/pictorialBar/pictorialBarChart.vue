@@ -4,7 +4,8 @@
 
 <script>
   import globalChartMixin from 'mixins/globalChartMixin'
-  import chartColors from 'constants/chartColors'
+  import storage from "utils/storage"
+  const chartColors = storage.get('tColors')
   import { getMaxValue, getMinValue, getColumnMaxValue } from 'constants/utils'
   import ECharts from 'vue-echarts/components/ECharts'
   import 'echarts/lib/chart/pictorialBar'
@@ -22,12 +23,12 @@ export default {
       ]
     },
     borderColor: {
-      type: Array,
-      default: () => chartColors.pictorialBar.border
+      type: String,
+      default: chartColors.pictorialBar.border
     },
     bgColor: {
-      type: Array,
-      default: () => chartColors.pictorialBar.bg
+      type: String,
+      default: chartColors.pictorialBar.bg
     },
   },
   components: { ECharts },

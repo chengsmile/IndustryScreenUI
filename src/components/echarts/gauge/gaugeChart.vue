@@ -7,7 +7,8 @@
 <script>
   import globalChartMixin from 'mixins/globalChartMixin'
   import ECharts from 'vue-echarts/components/ECharts'
-  import chartColors from 'constants/chartColors'
+  import storage from "utils/storage"
+  const chartColors = storage.get('tColors')
   import 'echarts/lib/chart/gauge'
   import 'echarts/lib/component/tooltip'
   import 'echarts/lib/component/title'

@@ -1,5 +1,6 @@
 import { visualMapOpt } from 'constants/chartConfig'
-import chartColors from 'constants/chartColors'
+import storage from "utils/storage"
+const chartColors = storage.get('tColors')
 export default {
   props: {
     visualMapShow: {

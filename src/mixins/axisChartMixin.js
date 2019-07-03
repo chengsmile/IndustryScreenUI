@@ -1,6 +1,7 @@
-import chartColors from 'constants/chartColors'
+// import chartColors from 'constants/chartColors'
 import echarts from 'echarts'
-
+import storage from "utils/storage"
+const chartColors = storage.get('tColors')
 export default {
   props: {
     rotate: {

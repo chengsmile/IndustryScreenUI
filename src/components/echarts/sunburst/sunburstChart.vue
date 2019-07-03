@@ -5,13 +5,14 @@
 </template>
 
 <script>
-import chartColors from 'constants/chartColors'
 // import { tooltipOpt, legendOpt } from 'constants/chartConfig'
 import ECharts from 'vue-echarts/components/ECharts'
 import 'echarts/lib/chart/sunburst'
 import globalChartMixin from 'mixins/globalChartMixin'
 import gridChartMixin from 'mixins/gridChartMixin'
 import axisChartMixin from 'mixins/axisChartMixin'
+import storage from "utils/storage"
+const chartColors = storage.get('tColors')
 
 export default {
   name: 'SunburstChart',

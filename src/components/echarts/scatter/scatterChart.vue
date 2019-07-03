@@ -7,8 +7,9 @@
 <script>
   import globalChartMixin from 'mixins/globalChartMixin'
   import axisChartMixin from 'mixins/axisChartMixin'
-  import chartColors from 'constants/chartColors'
   import ECharts from 'vue-echarts/components/ECharts'
+  import storage from "utils/storage"
+  const chartColors = storage.get('tColors')
 
   export default {
     name: 'scatterChart',

@@ -7,8 +7,8 @@ export default {
   activeMenu: storage.get('activeMenu') || [], // 二级导航
   title: storage.get('title') || '工业互联网安全态势',
   bg: storage.get('bg') || 'bg',
-  theme: storage.get('theme') || 'skin-blue',
-  tColors: storage.get('tColors') || chartThemeColors['skin-blue'],
+  theme: storage.get('theme') || 'skin-wathet',
+  tColors: storage.get('tColors') || chartThemeColors['skin-wathet'],
   count: storage.get('count') || 0,
   workspaceHeight: storage.get('workspaceHeight') || 0
 }

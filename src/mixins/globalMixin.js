@@ -2,7 +2,7 @@ import {mapGetters} from 'vuex'
 export default {
   data() {
     return {
-      // themeColors: {}
+      themeColors: {}
     }
   },
   computed: {

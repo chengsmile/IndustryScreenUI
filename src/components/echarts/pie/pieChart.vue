@@ -5,13 +5,13 @@
 <script>
   import globalChartMixin from 'mixins/globalChartMixin'
   import ECharts from 'vue-echarts/components/ECharts'
-  import chartColors from 'constants/chartColors'
   import 'echarts/lib/chart/pie'
   import 'echarts/lib/component/tooltip'
   import 'echarts/lib/component/legend'
   import 'echarts/lib/component/legendScroll'
   import 'echarts/lib/component/title'
-
+  import storage from "utils/storage"
+  const chartColors = storage.get('tColors')
   export default {
     name: 'pieChart',
     components: { ECharts },

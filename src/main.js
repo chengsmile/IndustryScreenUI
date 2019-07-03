@@ -80,6 +80,7 @@ new Vue({
         this.$store.commit('SET_ORIGIN_MENUS', res)
         this.$store.commit('SET_TITLE', res[index].menuName)
         this.$store.commit('SET_MENUS', routes[index].children)
+        this.$store.commit('SET_MENUS', routes[index].children)
       } else {
         alert('菜单初始化错误！！！！')
       }

@@ -8,7 +8,8 @@
   import axisChartMixin from 'mixins/axisChartMixin'
   import colorChartMixin from 'mixins/colorChartMixin'
   import tooltipChartMixin from 'mixins/tooltipChartMixin'
-  import chartColors from 'constants/chartColors'
+  import storage from "utils/storage"
+  const chartColors = storage.get('tColors')
   import { getMaxValue, getMinValue, getColumnMaxValue } from 'constants/utils'
   import ECharts from 'vue-echarts/components/ECharts'
   import 'echarts/lib/chart/bar'
