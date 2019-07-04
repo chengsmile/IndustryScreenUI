@@ -68,38 +68,30 @@
     mounted() {},
     watch: {
       chartData(newVal, oldVal) {
-        // console.log(`${this.chartName}chartData[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       colors(newVal, oldVal) {
-        // console.log(`${this.chartName}colors[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       titleColor(newVal, oldVal) {
         this.refresh()
       },
       pieName(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       showPieGradual(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       gradientStartColors(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       gradientEndColors(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       bgColors(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       bgBorderColor(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       }
     },

@@ -12,7 +12,7 @@ export default {
       splitLine: '#2d70c8'
     },
     bar: {
-      colors: ['#DD6B66', '#759AA0', '#E69D87', '#8DC1A9', '#EA7E53', '#EEDD78'],
+      colors: ['#da5df9', '#fbee64', '#fe9464', '#35e6ca', '#07dcfe', '#389aff', '#6e6aff', '#ff759f', '#2edd8e', '#9ea3ff', '#ff455a', '#b09d63'],
       gradualStart: ['#d85dfa', 'rgba(34,183,197,.2)', 'rgba(213,82,84,.2)', 'rgba(171,66,197,.2)'],
       gradualEnd: ['#4969f9', 'rgba(34,183,197,0)', 'rgba(213,82,84,0)', 'rgba(171,66,197,0)'],
       shadow: '#2c15b9'
@@ -38,6 +38,47 @@ export default {
       autoPlayNum: '#20fd07',
       autoPlayText: '#8ef3f8'
     },
+    gradualPie: {
+      colors: ['#da5df9', '#fbee64', '#fe9464', '#35e6ca', '#07dcfe', '#389aff', '#6e6aff', '#ff759f', '#2edd8e', '#9ea3ff', '#ff455a', '#b09d63'],
+      gradualColor: [
+        {color0: '#06a5cc', color1: '#2edd8e'},
+        {color0: '#9b2bf8', color1: '#e66be7'},
+        {color0: '#fb884f', color1: '#ffa67f'},
+        {color0: '#4582f8', color1: '#6994fe'},
+        {color0: '#8cc76b', color1: '#bcbe36'},
+        {color0: '#fe2c00', color1: '#fe8d01'},
+        {color0: '#72ccdb', color1: '#9af5d6'},
+        {color0: '#9a6af2', color1: '#e288f5'},
+        {color0: '#009ae7', color1: '#a2b5e1'},
+        {color0: '#006cfd', color1: '#02d0d0'},
+        {color0: '#fb7204', color1: '#fbb88d'},
+        {color0: '#fa8e3f', color1: '#f1ee08'}
+      ],
+      shadow: 'rgba(0, 0, 0, 0.5)',
+      autoPlayNum: '#20fd07',
+      autoPlayText: '#8ef3f8'
+    },
+    progressPie: {
+      gradualColor: [
+        {start: '#b6d93f', end: '#f5cd84'},
+        {start: '#d53e50', end: '#f082ce'},
+        {start: '#3fe085', end: '#90f082'},
+        {start: '#3ed5c3', end: '#80f1a5'},
+        {start: '#e440d9', end: '#b882f0'},
+        {start: '#3d48d5', end: '#82cbf1'}
+      ],
+      title: '#fff',
+      start: '#b6d93f',
+      end: '#f5cd84',
+      bg: '#3735a8'
+    },
+    pie3d: {
+      colors: ['#da5df9', '#fbee64', '#fe9464', '#35e6ca', '#07dcfe', '#389aff', '#6e6aff', '#ff759f', '#2edd8e', '#9ea3ff', '#ff455a', '#b09d63'],
+      lengend: {
+        item: '#fff',
+        itemHover: '#1ac1ea'
+      }
+    },
     gaugePie: {
       colors: ['#fc6160', '#ff9e56', '#75f5c3'],
       title: '#fff',
@@ -106,6 +147,10 @@ export default {
         'rgba(255, 255, 255, 0.85)', 'rgba(255, 255, 255, 1)'
       ].reverse(),
       axisLine: 'rgba(255, 255, 255, 0.2)'
+    },
+    treeMap: {
+      colors: ['#2a6ebf', '#5691d4', '#8b3332', '#5081c4', '#cb7373', '#7b983f', '#b1c785', '#61c9d0', '#f7ab70', '#6b51b3', '#ad4179', '#be5150', '#3c689a', '#5284bf', '#957ab9', '#9054b2', '#337a8d', '#9cba5f', '#b4571a', '#f5964f'],
+      text: '#fff'
     }
   },
   'skin-wathet': {
@@ -121,7 +166,7 @@ export default {
       splitLine: '#2d70c8'
     },
     bar: {
-      colors: ['#DD6B66', '#759AA0', '#E69D87', '#8DC1A9', '#EA7E53', '#EEDD78'],
+      colors: ['#da5df9', '#fbee64', '#fe9464', '#35e6ca', '#07dcfe', '#389aff', '#6e6aff', '#ff759f', '#2edd8e', '#9ea3ff', '#ff455a', '#b09d63'],
       gradualStart: ['#29b6ff', 'rgba(34,183,197,.2)', 'rgba(213,82,84,.2)', 'rgba(171,66,197,.2)'],
       gradualEnd: ['#2e51dd', 'rgba(34,183,197,0)', 'rgba(213,82,84,0)', 'rgba(171,66,197,0)'],
       shadow: '#073479'
@@ -147,6 +192,47 @@ export default {
       autoPlayNum: '#20fd07',
       autoPlayText: '#8ef3f8'
     },
+    gradualPie: {
+      colors: ['#da5df9', '#fbee64', '#fe9464', '#35e6ca', '#07dcfe', '#389aff', '#6e6aff', '#ff759f', '#2edd8e', '#9ea3ff', '#ff455a', '#b09d63'],
+      gradualColor: [
+        {color0: '#06a5cc', color1: '#2edd8e'},
+        {color0: '#9b2bf8', color1: '#e66be7'},
+        {color0: '#fb884f', color1: '#ffa67f'},
+        {color0: '#4582f8', color1: '#6994fe'},
+        {color0: '#fe2c00', color1: '#fe8d01'},
+        {color0: '#8cc76b', color1: '#bcbe36'},
+        {color0: '#72ccdb', color1: '#9af5d6'},
+        {color0: '#9a6af2', color1: '#e288f5'},
+        {color0: '#009ae7', color1: '#a2b5e1'},
+        {color0: '#006cfd', color1: '#02d0d0'},
+        {color0: '#fb7204', color1: '#fbb88d'},
+        {color0: '#fa8e3f', color1: '#f1ee08'}
+      ],
+      shadow: 'rgba(0, 0, 0, 0.5)',
+      autoPlayNum: '#20fd07',
+      autoPlayText: '#8ef3f8'
+    },
+    progressPie: {
+      gradualColor: [
+        {start: '#b6d93f', end: '#f5cd84'},
+        {start: '#d53e50', end: '#f082ce'},
+        {start: '#3fe085', end: '#90f082'},
+        {start: '#3ed5c3', end: '#80f1a5'},
+        {start: '#e440d9', end: '#b882f0'},
+        {start: '#3d48d5', end: '#82cbf1'}
+      ],
+      title: '#fff',
+      start: '#b6d93f',
+      end: '#f5cd84',
+      bg: '#3735a8'
+    },
+    pie3d: {
+      colors: ['#da5df9', '#fbee64', '#fe9464', '#35e6ca', '#07dcfe', '#389aff', '#6e6aff', '#ff759f', '#2edd8e', '#9ea3ff', '#ff455a', '#b09d63'],
+      lengend: {
+        item: '#fff',
+        itemHover: '#1ac1ea'
+      }
+    },
     gaugePie: {
       colors: ['#fc6160', '#ff9e56', '#75f5c3'],
       title: '#fff',
@@ -215,6 +301,10 @@ export default {
         'rgba(255, 255, 255, 0.85)', 'rgba(255, 255, 255, 1)'
       ].reverse(),
       axisLine: 'rgba(255, 255, 255, 0.2)'
+    },
+    treeMap: {
+      colors: ['#2a6ebf', '#5691d4', '#8b3332', '#5081c4', '#cb7373', '#7b983f', '#b1c785', '#61c9d0', '#f7ab70', '#6b51b3', '#ad4179', '#be5150', '#3c689a', '#5284bf', '#957ab9', '#9054b2', '#337a8d', '#9cba5f', '#b4571a', '#f5964f'],
+      text: '#fff'
     }
   }
 }

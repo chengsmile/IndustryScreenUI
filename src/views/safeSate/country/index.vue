@@ -60,7 +60,21 @@
         <div class="ratio21">
           <div class="row-h h-2">
             <div class="wrapper">
-              <ScatterBarChart gridLeft="10%" gridRight="10%"></ScatterBarChart>
+              <el-row class="full-block" :gutter="10">
+                <el-col :span="12">
+                  <ScatterBarChart gridLeft="10%" gridRight="15%"></ScatterBarChart>
+                </el-col>
+                <el-col :span="12">
+                  <div class="wrapper">
+                    <div class="half-h">
+                      <Pie3dChart id="pie3d1"></Pie3dChart>
+                    </div>
+                    <div class="half-h">
+                      <Pie3dChart id="pie3d2"></Pie3dChart>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
             </div>
           </div>
           <div class="row-h h-1">
@@ -179,11 +193,12 @@ import BarChart from 'components/echarts/bar/barChart'
 import ScatterBarChart from 'components/echarts/bar/scatterBarChart'
 import PictorialBarChart from 'components/echarts/pictorialBar/pictorialBarChart'
 import LiquidFillChart from 'components/echarts/liquidFill/liquidFillChart'
+import Pie3dChart from 'components/highCharts/pie3d/pie3dChart'
 import { on, off } from 'utils/dom'
 export default {
   name: 'SafeSate-Country',
   props: {},
-  components: { ChartBox, CornerBg, HeadBox, LineChart, BarChart, TotalList, GaugePieChart, PictorialBarChart, LiquidFillChart, ScatterBarChart },
+  components: { ChartBox, CornerBg, HeadBox, LineChart, BarChart, TotalList, GaugePieChart, PictorialBarChart, LiquidFillChart, ScatterBarChart, Pie3dChart },
   data () {
     return {
       tabBtnActive: 0,

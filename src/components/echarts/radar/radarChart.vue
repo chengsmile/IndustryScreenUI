@@ -1,7 +1,5 @@
 <template>
-  <div class="full-block">
-    <ECharts :options="options" auto-resize></ECharts>
-  </div>
+  <ECharts :options="options" auto-resize></ECharts>
 </template>
 
 <script>
@@ -126,8 +124,8 @@ export default {
       default: chartColors.radar.name
     },
     radarSplitLine: {
-      type: String,
-      default: chartColors.radar.splitLine
+      type: Array,
+      default: () => chartColors.radar.splitLine
     },
     radarsplitAreaColor: {
       type: String,
@@ -146,80 +144,62 @@ export default {
   },
   watch: {
     chartData(newVal, oldVal) {
-      // console.log(`${this.chartName}chartData[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     colors(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     shape(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     radius(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     splitNumber(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     startAngle(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     center(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     type(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     shadowBlur(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     symbol(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     width(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     opacity(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     radarAreaStyleNormal(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     radarAreaStyleEmphasis(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     radarNameColor(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     radarSplitLine(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     radarsplitAreaColor(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     },
     radarAxisLine(newVal, oldVal) {
-      // console.log(`${this.chartName}colors[新值:${this.newVal};旧值:${this.oldVal}]`)
       this.refresh()
     }
   },
   mounted() {
-    this.createTplCode('RadarChart')
+    // this.createTplCode('RadarChart')
   },
   methods: {
     setOptions() {

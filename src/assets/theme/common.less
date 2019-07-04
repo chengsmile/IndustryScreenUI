@@ -156,6 +156,9 @@
   .full-h{
     height: 100%;
   }
+  .half-h{
+    height: 50%;
+  }
 
   .clearfix:after {
     visibility: hidden;
@@ -189,16 +192,13 @@
     background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
   }
   // 页面中公用的样式
-  .gauge-pie-box{
-    position: relative;
-    .gauge-pie-name{
-      position: absolute;
-      left: 50%;
-      bottom: 20%;
-      transform: translateX(-50%);
-      &.name-color1{ color: @gaugePieTextColor1;}
-      &.name-color2{ color: @gaugePieTextColor2;}
-      &.name-color3{ color: @gaugePieTextColor3;}
-    }
+  .progress-pie-value {
+    font-size: 2vmax;
+    &.color1 {color: @progressPieValueColor1;}
+    &.color2 {color: @progressPieValueColor2;}
+    &.color3 {color: @progressPieValueColor3;}
+    &.color4 {color: @progressPieValueColor4;}
+    &.color5 {color: @progressPieValueColor5;}
+    &.color6 {color: @progressPieValueColor6;}
   }
 }

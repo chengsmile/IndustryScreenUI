@@ -36,6 +36,17 @@ function menus() { // eslint-disable-line
             'homePage': false,
             'orderNum': 1
           }, {
+            'fatherId': Math.floor(Math.random() * 10000 + Math.random() * 10),
+            'id': Math.floor(Math.random() * 10000 + Math.random() * 10),
+            'isNewWindow': false,
+            'isVisible': true,
+            'menuCode': '/safeSate/global',
+            'menuIcon': 'fa fa-edit',
+            'menuName': '全球',
+            'menuPath': '/safeSate/global',
+            'homePage': false,
+            'orderNum': 0
+          }, {
            'fatherId': Math.floor(Math.random() * 10000 + Math.random() * 10),
             'id': Math.floor(Math.random() * 10000 + Math.random() * 10),
             'isNewWindow': false,

@@ -54,7 +54,7 @@
       },
       radius: {
         type: Array,
-        default: () => ['40%', '55%']
+        default: () => ['40%', '65%']
       },
       showPercent: {
         type: Boolean,
@@ -103,67 +103,51 @@
     },
     watch: {
       chartData(newVal, oldVal) {
-        // console.log(`${this.chartName}chartData[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       colors(newVal, oldVal) {
-        // console.log(`${this.chartName}colors[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieName(newVal, oldVal) {
-        // console.log(`${this.chartName}pieName[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       seriesLabelShow(newVal, oldVal) {
-        // console.log(`${this.chartName}seriesLabelShow[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieAutoPlay(newVal, oldVal) {
-        // console.log(`${this.chartName}pieAutoPlay[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       center(newVal, oldVal) {
-        // console.log(`${this.chartName}center[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       radius(newVal, oldVal) {
-        // console.log(`${this.chartName}radius[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       showPercent(newVal, oldVal) {
-        // console.log(`${this.chartName}showPercent[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieAutoPlayNumColor(newVal, oldVal) {
-        // console.log(`${this.chartName}pieAutoPlayNumColor[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieAutoPlayNumFontSize(newVal, oldVal) {
-        // console.log(`${this.chartName}pieAutoPlayNumFontSize[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieAutoPlayNumFontWeight(newVal, oldVal) {
-        // console.log(`${this.chartName}pieAutoPlayNumFontWeight[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieAutoPlayTextColor(newVal, oldVal) {
-        // console.log(`${this.chartName}pieAutoPlayTextColor[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieAutoPlayTextFontSize(newVal, oldVal) {
-        // console.log(`${this.chartName}pieAutoPlayTextFontSize[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       pieAutoPlayTextFontWeight(newVal, oldVal) {
-        // console.log(`${this.chartName}pieAutoPlayTextFontWeight[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       showRatio(newVal, oldVal) {
-        // console.log(`${this.chartName}showRatio[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       },
       seriesLabelEmphasisShow(newVal, oldVal) {
-        // console.log(`${this.chartName}seriesLabelEmphasisShow[新值:${newVal};旧值:${oldVal}]`)
         this.refresh()
       }
     },
@@ -280,7 +264,7 @@
               ]
             },
             {
-              name: name,
+              name: this.pieName,
               type: 'pie',
               radius: this.radius,
               center: this.center,

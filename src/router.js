@@ -8,6 +8,7 @@ const ministry_linkage = _ => import(/* webpackChunkName: 'ministry_linkage' */ 
 const safeSate_attackSource = _ => import(/* webpackChunkName: 'safeSate_attackSource' */ 'views/safeSate/attackSource/index.vue')
 const safeSate_cloud = _ => import(/* webpackChunkName: 'safeSate_cloud' */ 'views/safeSate/cloud/index.vue')
 const safeSate_country = _ => import(/* webpackChunkName: 'safeSate_country' */ 'views/safeSate/country/index.vue')
+const safeSate_global = _ => import(/* webpackChunkName: 'safeSate_global' */ 'views/safeSate/global/index.vue')
 const safeSate_huawei = _ => import(/* webpackChunkName: 'safeSate_huawei' */ 'views/safeSate/huawei/index.vue')
 const safeSate_hydroelectricity = _ => import(/* webpackChunkName: 'safeSate_hydroelectricity' */ 'views/safeSate/hydroelectricity/index.vue')
 const safeSate_industry = _ => import(/* webpackChunkName: 'safeSate_industry' */ 'views/safeSate/industry/index.vue')
@@ -26,6 +27,7 @@ export default {
   '/safeSate/attackSource': safeSate_attackSource,
   '/safeSate/cloud': safeSate_cloud,
   '/safeSate/country': safeSate_country,
+  '/safeSate/global': safeSate_global,
   '/safeSate/huawei': safeSate_huawei,
   '/safeSate/hydroelectricity': safeSate_hydroelectricity,
   '/safeSate/industry': safeSate_industry,

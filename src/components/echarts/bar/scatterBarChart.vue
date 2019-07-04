@@ -40,6 +40,14 @@ export default {
     labelNumColor: {
       type: String,
       default: chartColors.scatterBar.label
+    },
+    symbolSize: {
+      type: Number,
+      default: 35
+    },
+    barWidth: {
+      type: Number,
+      default: 20
     }
   },
   data() {
@@ -57,7 +65,19 @@ export default {
     },
     colors(newVal, oldVal) {
       this.refresh()
-    }
+    },
+    axisLabelColor(newVal, oldVal) {
+      this.refresh()
+    },
+    labelNumColor(newVal, oldVal) {
+      this.refresh()
+    },
+    symbolSize(newVal, oldVal) {
+      this.refresh()
+    },
+    barWidth(newVal, oldVal) {
+      this.refresh()
+    },
   },
   methods: {
     setOptions() {
@@ -101,7 +121,7 @@ export default {
                 }
               }
             },
-            barWidth: 20,
+            barWidth: this.barWidth,
             itemStyle: {
               normal: {
                 color: function(params) {
@@ -117,7 +137,7 @@ export default {
             type: "scatter",
             hoverAnimation: false,
             data: this.circleData,
-            symbolSize: 35,
+            symbolSize: this.symbolSize,
             itemStyle: {
               normal: {
                 color: function(params) {
