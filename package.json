@@ -17,7 +17,7 @@
     "highcharts": "^7.1.2",
     "html2canvas": "^1.0.0-rc.1",
     "js-md5": "^0.7.3",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "mockjs": "^1.0.1-beta3",
     "nprogress": "^0.2.0",
     "resize-detector": "^0.2.0",
